@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<meta char-set="utf8">
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<title>{{page.title}} ~ {{page.subtitle}}</title>
+</head>
+
+<body>
+<div id="box">
+<div id="header">
+<h1><a href=index.html><img src=img/holonotes.png class=logo></a>{{page.title}}</h1><i class=sub>{{page.subtitle}}</i></small>
+</div>
+
+<!--navigation-->
+<div id="nav">
+<a href="wiki.html">Wiki</a>&nbsp;&nbsp;
+<a href="about.html">About</a>&nbsp;&nbsp;
+<a href="archives.html">Archives</a>&nbsp;&nbsp;
+<a href="contact.html">Contact</a>
+</div>
+<br clear=all>
+<!--main content-->
+<div id="content">
+
+<div data-md="{{page.framapad_url}}">
+<div class=md>
+{{content}}
+</div>
+
+</div>
+
+<!--footer-->
+<div id="footer">
+&nbsp;© 2020 Michel Combes, for the KI-Network
+<small><br />Designed w/ ♡  
+</small>
+</div>
+
+</div>
+
+<!script src=https://cdn.jsdelivr.net/gh/mychelium/js@0.0.8.8/dist/mdfetchandrender.js></script>
+</body>
+</html>

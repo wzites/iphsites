@@ -1,0 +1,42 @@
+--- # json
+- 
+  content: "\nthis file is at <https://mensuel.framapad.org/p/IRP>\n\n\n## Development Methodologies &amp; IRP  (Implicit Reference Parameters)\n\n[IRP] is the way for developing software that is very much in ligne with how the \"organic\" world grows :\n    the initial intention need to be complete top/down approach\n    go from the general, big vision, ... and go trough the dependencies while you encounter them long\n    the \"tree\"  structure of the code.\n\n[IRP]: {{SEARCH}}=!g+Implicit+Reference+Parameter\n\nThe major advantage is that the \"dependencies\" and all the software\nmodules become implicit and the is no extra maintenance: the code is\nits own dependency tree and it updates automatically when it is modified\nrevised.\n\n\nIn fact most of the software industry chose a different approach of\nbuilding code from small block and assembling them together... creating a\nload of problems along the way and a \"perpetual\" re-manufacturing of code.\n\nHowever I had the feeling that building things from the ground up was\n\"natural\", well it is not... You need to design the pieces before,\nso you can only make a combination of existing parts : hard for a true\ngenuine creation. However the bottom up approach is straight forward to\nautomate, so AI synthesis can be applicable here, (code synthesis similar to hardware synthesis),\n\nCreation must be seeded from the complete picture such that you don't limit yourself in to a tunnel vision \nthe where the IPR approach is very helpful.\n\nYou start with what you want and created what you need to achieve it, as opposed to start with what you have\nand assemble the pieces towards something hopefully close to what you wanted.\n\nIt is like grows a plant from a seed rather than grafting it from a branch.\n\nI try to follow this approach to create a [holoContract]\n\nSmart contract are pieced of code executed on any nodes.\neach smart contract are sign such that they are executed only after verification of\ntheir authenticity.\n\n for example :\n \n * ``echohip6`` contract is a *bot returning the [HIP6] address of the member running it\n * ``hlr_install.sh`` is a contract that installs the holoRing tools on the member computer\n * ``nop`` is the simplest contact that does nothing (for testing the system)\n\nA map of \"registered\" can contract is provided for verification.\n\nThe code for the execution routine can be :\n\n\n```perl\nmy $map = { # holo*contracts map ...\n'echohip6' => 'QmeB4r7gjrd25H1Q9QRpXTXuLSUGSPtxWLq4i29EBA9Ug9',\n'hlr_install.sh' => 'QmZT5myTDrv96aDDakDVoZ2rp9zzdV7Pfj1JbAknJsdQfQ',\n'nop' => 'QmVGTcK9qovFM8UKfwE8DhMdPDE3H57jwSMwZtkAYK2qWT'\n}\n\n# getting the name of the application folder\nmy $appdir = &get_app_path($app);\nif (! -d $appdir) { # app is not local; fetch if from [IPFS] !\n  my  $url = sprintf'http://127.0.0.1:8080/ipfs/%s',$map->{$app};\n  &get_app($appdir,$url);\n}\n\n# -----------------------------------------------------\n# execution :\nmy $status = -$$;\nif (-e \"$appdir/start.pl\") { # this is a *perl* contract !\n   do \"$appdir/start.pl\"; # execute smart contact ...\n} else (-e \"$appdir/runme.sh\") { # this is a *bash* contract !\n  $status = system sprintf 'bash -ex %s/runme.sh',$appdir;\n\n} elsif (-e \"$appdir/README.md\") {\n  system sprintf 'xdg-open %s/README.md',$appdir;\n} else {\n  status = printf \"app: %s installed in %s\\n\",$app,$appdir;\n}\n# -----------------------------------------------------\nexit $?;\n\n# ...\n1; \n```\n\n<!--\nhttps://gitlab.com/api/v4/projects/18965943/badges\n-->\n\nsee also: [holoBin](http://bafybeidbp7g3lmqs7sgmbw2efggn2fhw4wwrtyyngk4c4xnb3kj3eqoogq.ipfs.localhost:8080/#4BqCuJfVk2xiwCggJmdP7LJGV24WEWpXDQM7CSQxeawM),\n[framaPad](https://mensuel.framapad.org/p/IRP)\n\n\n![pipe](https://gitlab.com/kin4/holowiki/badges/master/pipeline.svg)\n\n"
+  created: '1593618568.31745'
+  key: ag1pbmtwYWRub3RlcGFkcioLEgtVc2VyUHJvZmlsZSIIbWdjb21iZXMMCxIETm90ZRiAgMjS0cyjCww
+  modified: '1593618577.94143'
+  sync_num: 2
+  tags: []
+
+  title: IRP
+  view_mode: 0
+- 
+  content: "---\nlayout: notepad\ntitle: Michel’s block dissolution\nsubstitle: (Notes from call courtesy Colleen)\n---\n\nDate: 24 June 2020\n\nBreathing, Chakra breathing [Ujjayi breath][1]\n\n- Maintain your physical temple space (symbolic)\n- Create purpose in your environment\n- Honor your deep sacred space.\n- What is your relationship to your sacred space?\n- What is the level of presence you give to your things in your space?\n\nTheme of giving up (just like Dad…after marriage)– needs unpacking.\nHow can you close it out?\n\nExplore interdependence\n\nHave the self-organized you!\n\nThe Singularity Principal – great movie\n\n[1]: https://www.one-tab.com/page/e70VZ-GbQfafxYi_3b5hvA\n\n## Next steps\n\n- Shame and guilt? (Francois represents your core wound of not being able to get things done)\n\n- Step into new dynamics of this field to create completeness.\n- Francois practice on unblocking even where you feel uncomfortable, feel pain….\n- a lesson in how not to give up.\n- Everything still feels like it requires a lot of energy (fear of wasting energy)….\n- the emotional experience of it not being worth it.\n- Need to bring awareness to this and surrendering to the unknown will shift the field.\n- Theme of giving up due to fear\n- Clean up from the past and bring it to integrity.\n- How can we support him.\n- Grief – sadness/children/mom – not fully processed grieving (related to mom stuff)\n- Only way through is self-care, nurturing, presence\n\n- Your procrastination is your suppressed grief!\n\nAfter thoughts:\n\nGuilt and shame – not having a job, not paying child support,\nbeing outside the societal norm, being an outcast, peer pressure\n(reminder of everything around)\n\n"
+  created: '1593617628.68996'
+  key: ag1pbmtwYWRub3RlcGFkcioLEgtVc2VyUHJvZmlsZSIIbWdjb21iZXMMCxIETm90ZRiAgMiCiN_FCQw
+  modified: '1593618355.56737'
+  sync_num: 2
+  tags: []
+
+  title: Michel's blocks dissolution
+  view_mode: 0
+- 
+  content: "meeting w/ @amber \n\n3. Create/ review 90 Day Development Analysis Report \n- Issues / Bugs (add into gitlab - test being able to see it in click up)\n  * https://framagit.org/holoteam/mlp/-/issues\n  \n  ( can framasoft be integrated w/ clickup, probably YES )\n  \n- HoloProfile (holoID - Love ID/ node on kin map - kumu/ holopassport)\n- Holostamp/ - Artifacts\n- Hololedger/ Kinledger\n- Holocontracts \n- Holopad (ether pad/ framapad)\n- Hologit (gitlab - framapad)\n- Holocode (IRP) \n- Holowiki\n- Cloudflare (distributed web gateway, is similar to http://gateway.ipfs.io )\n  + using cloudflare as a gateway and CDN\n\n- Cloud Server (Ethical Server/ Next Cloud) - integrate with gitlab \n- Review Ecosystem Presentation \n- Security/ Protection \n- HoloGuide\n- Holobook \n\n"
+  created: '1593618203.57763'
+  key: ag1pbmtwYWRub3RlcGFkcioLEgtVc2VyUHJvZmlsZSIIbWdjb21iZXMMCxIETm90ZRiAgMiStuvhCQw
+  modified: '1593618203.5777'
+  sync_num: 1
+  tags: []
+
+  title: "meeting w/ @amber "
+  view_mode: 0
+- 
+  content: "Hello !\n\nMy name is Michel and  I live in Ecublens (Switzerland)"
+  created: '1593617503.90647'
+  key: ag1pbmtwYWRub3RlcGFkcioLEgtVc2VyUHJvZmlsZSIIbWdjb21iZXMMCxIETm90ZRiAgMjc56KTCQw
+  modified: '1593617503.90651'
+  sync_num: 1
+  tags: []
+
+  title: Hello !
+  view_mode: 0
+...
